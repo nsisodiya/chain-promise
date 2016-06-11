@@ -1,0 +1,19 @@
+{
+  "name": "chain-promise",
+  "version": "0.0.1",
+  "description": "promise chain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsisodiya/chain-promise.git"
+  },
+  "author": "Narendra Sisodiya <narendra@narendrasisodiya.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsisodiya/chain-promise/issues"
+  },
+  "homepage": "https://github.com/nsisodiya/chain-promise#readme"
+}
