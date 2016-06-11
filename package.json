@@ -4,16 +4,29 @@
   "description": "promise chain",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "webpack --watch & http-server dist -p 8000 & wait"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nsisodiya/chain-promise.git"
   },
+  "keywords": [
+    "chain",
+    "promise"
+  ],
   "author": "Narendra Sisodiya <narendra@narendrasisodiya.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nsisodiya/chain-promise/issues"
   },
-  "homepage": "https://github.com/nsisodiya/chain-promise#readme"
+  "homepage": "https://github.com/nsisodiya/chain-promise#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "webpack": "^1.13.1",
+    "webpack-livereload-plugin": "^0.8.1"
+  }
 }
