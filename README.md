@@ -5,6 +5,7 @@ Simple implementation for chaining promises !!
 
 ```bash
 npm install chain-promise
+```
 
 # Example
 
@@ -40,7 +41,9 @@ var asyncProcess3 = function (obj) {
 };
 ```
 
-But we want to execute these Promises one by one. We want to pass data from another like this
+And, We want to execute these Promises one by one. We want to pass data from one to another.
+
+This is simple task, can be done like this.
 
 ```js
 var D1 = {};
@@ -54,23 +57,18 @@ asyncProcess1(D1).then(function (D2) {
 ```
 You can see, we are passing data from each async process to another by one by one.
 
-This work, and we can code like this, But there are two problems
+This works, But there are two problems
 
-* This kind of chain and passing data from one another can be automated
-* If there are dynamic list of asyncProcessors then this solution do not work well.
+* This kind of chain and passing data from one another can be automated !
+* If there are dynamic list of asyncProcessors then above solution will not work.
  
 For this reason, I have created this tiny library.
 
-Same functionality can be written as 
+Above functionality can be re-written as 
 
 ```js
-
 var chainPromise = require("chain-promise");
-
 chainPromise([asyncProcess1, asyncProcess2, asyncProcess3], D1).then(function (D4) {
   console.log("Final data is, ", D4);
 });
 ```
-
- 
-
