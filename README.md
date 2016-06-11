@@ -55,16 +55,26 @@ asyncProcess1(D1).then(function (D2) {
   });
 });
 ```
+Above code can be re-written as
+
+```js
+asyncProcess1(D1)
+  .then(asyncProcess2)
+  .then(asyncProcess3)
+  .then(function (D4) {
+    console.log("Final data is, ", D4);
+  });
+```
+
 You can see, we are passing data from each async process to another by one by one.
 
-This works, But there are two problems
+This works, But there are 1 problem
 
-* This kind of chain and passing data from one another can be automated !
-* If there are dynamic list of asyncProcessors then above solution will not work.
+* How to handle dynamic list of asyncProcessors ?
  
-For this reason, I have created this tiny library.
+If you have dynamic list of then you can use this tiny library (source code is just 3-4 lines) !
 
-Above functionality can be re-written as 
+Above functionality can be re-written as
 
 ```js
 var chainPromise = require("chain-promise");
